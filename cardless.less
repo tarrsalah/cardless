@@ -1,0 +1,10 @@
+.cardless(@columns, @margin) {
+    float: left;
+    margin-right: @margin;
+    margin-bottom: @margin;
+    width: ~"calc((100% - (@{columns} - 1) * @{margin}) / @{columns})";
+
+    &:nth-of-type(@{columns}n + @{columns}) {
+        margin-right: 0;
+    }
+}

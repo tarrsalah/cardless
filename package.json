@@ -1,0 +1,29 @@
+{
+  "name": "cardless",
+  "version": "1.0.0",
+  "description": "small card layout mixin.",
+  "main": "index.js",
+  "scripts": {
+    "demo": "lessc --clean-css ./demo/style.less ./demo/style.min.css",
+    "watch:demo" : "onchange -i './cardless.less' './demo/index.html' './demo/style.less' -- npm run demo",
+    "serve": "browser-sync start --server --ss ./demo --files ./demo/index.html ./demo/style.min.css",
+    "start": "npm-run-all -p watch:demo serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/tarrsalah/cardless"
+  },
+  "keywords": [
+    "card",
+    "less",
+    "layout."
+  ],
+  "author": "Taouririt Salah Eddine <tarrsalah@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "less": "^2.7.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "onchange": "^3.0.0"
+  }
+}
