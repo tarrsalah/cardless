@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Cardless</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./style.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/tomorrow.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1>Cardless</h1>
+        <pre>
+            <code class="less">
+.cardless(@columns, @margin) {
+    float: left;
+    margin-right: @margin;
+    margin-bottom: @margin;
+    width: ~"calc((100% - (@{columns} - 1) * @{margin}) / @{columns})";
+
+    &:nth-of-type(@{columns}n + @{columns}) {
+        margin-right: 0;
+    }
+}
+            </code>
+        </pre>
+        <div class="container"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/less.min.js"></script>
+        <script>
+         document.addEventListener("DOMContentLoaded", function(event) {
+             var container = document.getElementsByClassName("container")[0];
+             for (i = 0; i < 30; i++) {
+                 var card = document.createElement("div");
+                 card.className += " card";
+                 card.innert
+                 container.appendChild(card);
+             }
+         });
+         hljs.initHighlightingOnLoad();
+        </script>
+    </body>
+</html>

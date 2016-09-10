@@ -1,0 +1,77 @@
+@import "../cardless.less";
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-width: 300px;
+}
+
+h1 {
+    font-family: 'Rochester', cursive;
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+    margin: 0.5em;
+
+    @media only screen and (min-width: 400px) {
+        font-size: 4em;
+    }
+}
+
+pre {
+    overflow: auto;
+    font-size: 0.9em;
+    width: 70%;
+    margin: 0 auto;
+    font-weight: 100;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    margin-bottom: 4em;
+    &:after {
+        content:" ";
+        display: table;
+        clear: both;
+    }
+}
+
+.card {
+    height: 5em;
+    background-color: #999;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 500px) {
+        background-color: #aaa;
+        .cardless(1, 10px);
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 700px){
+        background-color: #bbb;
+        .cardless(4, 10px);
+    }
+
+    @media only screen and (min-width: 700px) and (max-width: 900px) {
+        background-color: #ccc;
+        .cardless(6, 10px);
+    }
+
+    @media only screen and (min-width: 900px) and (max-width: 1000px){
+        background-color: #ddd;
+        .cardless(8, 10px);
+    }
+
+    @media only screen and (min-width: 1000px) {
+        background-color: #eee;
+        .cardless(10, 10px);
+    }
+}
+
+.container,
+.card {
+    border: 1px solid rgba(1,1,1, 0.3);
+}
